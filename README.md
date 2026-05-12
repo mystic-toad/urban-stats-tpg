@@ -8,4 +8,4 @@ This will be a subproject of my [tpg-utils](https://github.com/mystic-toad/tpg-u
 ## License and Data Usage
 This project's license is contained in `LICENSE` at [license](https://github.com/mystic-toad/urban-stats-tpg?tab=AGPL-3.0-1-ov-file).
 
-Some geographical data sourced from [urbanstats](https://github.com/kavigupta/urbanstats). All data used under the terms of the AGPL-3.0 license.
+Some geographical data is derived from [urbanstats](https://github.com/kavigupta/urbanstats). All data used under the terms of the AGPL-3.0 license.
