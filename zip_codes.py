@@ -23,7 +23,7 @@ try:
     import geopandas as gpd
     from shapely.geometry import Point
 except Exception as e:
-    print("Missing dependency: geopandas (and shapely).\nInstall with: python -m pip install geopandas shapely fiona")
+    print("Missing dependency: geopandas (and shapely).\nInstall with: python -m pip install geopandas shapely")
     sys.exit(1)
 
 
