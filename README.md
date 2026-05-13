@@ -2,7 +2,7 @@
 
 This repo serves as a utility for reverse geocoding lat/lon pairs into zip codes in various formats. This is also a child project of [tpg_utils](https://github.com/mystic-toad/tpg-utils), a comprehensive photo metadata searching suite optimized for TPG, and features photo index integrations.
 
-*This is still an early-development cycle application, expect issues. Please report any issues you find so they can be fixed.*
+*This is still an early development-cycle application, expect issues. Please report any issues you find so they can be fixed.*
 
 ## Installation
 - This feature uses several data processing and geographical dependencies. In your active virtual environment run:
