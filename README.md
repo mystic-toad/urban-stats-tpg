@@ -17,8 +17,6 @@ python -m pip install -r requirements.txt
 
 ### Search coordinates for ZIP (single or CSV of queries)
 
-Search is now the default when `--zips` is not provided.
-
 Single coordinate (positional lat lon):
 ```powershell
 python zip_codes.py 38.044950193509585, -97.37610793857532 --out results.csv
