@@ -18,6 +18,7 @@ import pickle
 import argparse
 import csv
 from pathlib import Path
+import urllib.request
 
 try:
     import geopandas as gpd
@@ -95,6 +96,25 @@ def find_shp_zip_field(gdf, provided=None):
     return None
 
 
+def ensure_shapefile(shp_path):
+    """Download shapefile if missing from Census Bureau."""
+    shp_path = Path(shp_path)
+    if shp_path.exists():
+        return shp_path
+
+    print(f"Shapefile not found: {shp_path}")
+    print("Downloading from Census Bureau...")
+    url = "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_zcta510_500k.zip"
+    try:
+        urllib.request.urlretrieve(url, shp_path)
+        print(f"Downloaded to {shp_path}")
+    except Exception as e:
+        print(f"Failed to download: {e}")
+        print(f"Please download manually from: {url}")
+        sys.exit(1)
+    return shp_path
+
+
 def main():
     p = argparse.ArgumentParser(prog="zip_codes",
                                 description="Assign photos from an index into ZIP polygons or find ZIP for coordinates")
@@ -117,11 +137,8 @@ def main():
 
     args = p.parse_args()
 
-    # load shapes
-    shp_path = Path(args.zipfile)
-    if not shp_path.exists():
-        print(f"Shapefile zip not found: {shp_path}")
-        sys.exit(1)
+    # load shapes (download if missing)
+    shp_path = ensure_shapefile(args.zipfile)
 
     try:
         zips_gdf = gpd.read_file(str(shp_path))
