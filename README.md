@@ -1,7 +1,8 @@
-# ZIP-code integration for photofind
+# ZIP Code Utility
 
-This add-on assigns photos (from a `photofind` index) to U.S. Census zip polygons
-and provides a search helper that returns ZIP information for coordinates.
+This repo serves as a utility for reverse geocoding lat/lon pairs into zip codes in various formats. This is also a child project of [tpg_utils](https://github.com/mystic-toad/tpg-utils), a comprehensive photo metadata searching suite optimized for TPG, and features photo index integrations.
+
+*This is still an early-development cycle application, expect issues. Please report any issues you find so they can be fixed.*
 
 ## Installation
 - This feature uses several data processing and geographical dependencies. In your active virtual environment run:
@@ -76,3 +77,4 @@ Examples
 ## License & Disclaimer
 - This is a small helper intended to plug into the existing photofind workflow. Review the code and run on a test directory first. The author accepts no responsibility for data loss.
 - US Census Data used in this project, under appropriate licenses.
+- ZIP Code trademark owned by United States Postal Office, which has no affiliation and does not endorse this project.
