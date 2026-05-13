@@ -77,4 +77,4 @@ Examples
 ## License & Disclaimer
 - This is a small helper intended to plug into the existing photofind workflow. Review the code and run on a test directory first. The author accepts no responsibility for data loss.
 - US Census Data used in this project, under appropriate licenses.
-- ZIP Code trademark owned by United States Postal Office, which has no affiliation and does not endorse this project.
+- ZIP Code trademark owned by United States Postal Office, which has no affiliation with and does not endorse this project.
